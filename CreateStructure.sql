@@ -12,13 +12,8 @@ CREATE TABLE  Basket(
   ID INT PRIMARY KEY IDENTITY,
   ID_SKU INT REFERENCES SKU (ID),
   ID_Family INT REFERENCES Family (ID),
-<<<<<<< Updated upstream
-  Quantity INT CHECK(Quantity >0),
-  Value REAL CHECK(Value >0), 
-=======
   Quantity decimal CHECK(Quantity >0),
-  Value INT CHECK(Value >0), 
->>>>>>> Stashed changes
+  Value decimal CHECK(Value >0), 
   PurchaseDate DATE DEFAULT GETDATE(), 
   DiscountValue REAL
 )
